@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ERI WebChat — Ambiente de pruebas PLAI</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0b1220;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #e5e7eb;
+      padding: 24px;
+    }
+    .card {
+      max-width: 560px;
+      width: 100%;
+      background: #111a2e;
+      border: 1px solid #1f2b47;
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: #6366f1;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    h1 { margin: 0 0 4px; font-size: 28px; }
+    .subtitle { color: #9ca3af; margin-bottom: 28px; }
+    .info {
+      text-align: left;
+      background: #0b1220;
+      border: 1px solid #1f2b47;
+      border-radius: 12px;
+      padding: 20px 24px;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+    .info b { color: #c7cdfb; }
+    .hint { color: #6b7280; font-size: 13px; margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="badge">AMBIENTE DE PRUEBAS · PLAI</span>
+    <h1>ERI WebChat — QA</h1>
+    <p class="subtitle">Página estática para revisar el widget contra staging</p>
+    <div class="info">
+      <div>🤖 <b>Asistente:</b> ERI</div>
+      <div>🏢 <b>Tenant:</b> PLAI (QA)</div>
+      <div>💬 <b>Canal de prueba:</b> WebChat integrado en vivo contra <code>staging.eri.plai.cl</code></div>
+      <div>🎫 <b>Issue de referencia:</b> ERI-HU-356 (captura de celular en pre-chat)</div>
+    </div>
+    <p class="hint">El widget se abre automáticamente en la esquina inferior derecha.<br>
+      Escribí un mensaje para interactuar con ERI en tiempo real.</p>
+  </div>
+
+  <script src="https://staging.eri.plai.cl/static/js/webchat-widget.js"
+          data-api-key="plai-staging-test-2026"
+          data-api-url="https://staging.eri.plai.cl"
+          data-title="ERI · PLAI (QA)"
+          data-color="#6366f1"
+          data-welcome="¡Hola! 👋 ¿En qué puedo ayudarte hoy?"
+          data-prechat="true"
+          data-auto-open="1200">
+  </script>
+</body>
+</html>
